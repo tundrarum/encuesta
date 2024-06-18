@@ -30,4 +30,4 @@ for file in glob('*.xlsx'):
 
 for sheet, rows in keys.items():
     for key, val in rows:
-        print(",".join([sheet,str(key),val]))
+        print(";".join([sheet,str(key),val]))
