@@ -1,0 +1,7 @@
+id,description
+1,Red de calefacción urbana (energía térmica suministrada por tuberías desde un lugar distinto al edificio en el que está la vivienda)
+2,Calefacción central (común para todo el edificio de viviendas)
+3,"Calefacción individual (calderas individuales, radiadores eléctricos fijos en cada estancia…)"
+4,Sistema de calefacción no fijo (por ejemplo calentadores portátiles como un radiador eléctrico o un calefactor de ventilador que se puede mover de una habitación a otra)
+5,No utiliza ningún sistema de calefacción
+99,No lo sabe 
