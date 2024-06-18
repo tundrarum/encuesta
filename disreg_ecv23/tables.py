@@ -1,8 +1,7 @@
+import csv
+
 from glob import glob
 from collections import defaultdict
-
-import json
-import sys
 
 import openpyxl
 
@@ -28,6 +27,8 @@ for file in glob('*.xlsx'):
                     else:
                         in_key = False
 
-for sheet, rows in keys.items():
-    for key, val in rows:
-        print(";".join([sheet,str(key),val]))
+with open('tables.csv', 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    for sheet, rows in keys.items():
+        for key, val in rows:
+            writer.writerow([sheet,key,val])
