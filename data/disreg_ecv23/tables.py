@@ -27,8 +27,12 @@ for file in glob('*.xlsx'):
                     else:
                         in_key = False
 
-with open('tables.csv', 'w') as csvfile:
+with open('codigos.csv', 'w') as csvfile:
     writer = csv.writer(csvfile)
     for sheet, rows in keys.items():
-        for key, val in rows:
-            writer.writerow([sheet,key,val])
+        code = sheet.split("/")[-1]
+        with open(f'codigos/{code}.csv', 'w') as codefile:
+            code_writer = csv.writer(codefile)
+            for key, val in rows:
+                writer.writerow([sheet,key,val])
+                code_writer.writerow([key, val])
