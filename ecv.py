@@ -6,7 +6,10 @@ import duckdb
 
 DB_NAME = "ecv.duckdb"
 
-os.remove(DB_NAME)
+try:
+    os.remove(DB_NAME)
+except OSError:
+    pass
 
 con = duckdb.connect(database=DB_NAME)
 
