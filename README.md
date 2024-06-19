@@ -62,4 +62,4 @@ Install depedencies
 
     pip3 install -r requirements.txt
 
-Run the `ecv.py` script: it will delete (if exists) and then create `ecv.duckdb`.
+Run `make build`. It will delete (if exists) and then create `ecv.duckdb` and the compress it to `ecv.duckdb.gz`.
