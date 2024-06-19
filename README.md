@@ -8,7 +8,7 @@ Install [DuckDB CLI](https://duckdb.org/docs/installation/index?version=stable&e
 
 First unzip the database:
 
-    gunzip ecv.duckdb.gz
+    gunzip -c db/ecv.duckdb.gz > db/ecv.duckdb
 
 Use the `duckdb db/ecv.duckdb` cli to interact with the database. Example
 
