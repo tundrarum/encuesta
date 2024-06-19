@@ -6,7 +6,11 @@ Install [DuckDB CLI](https://duckdb.org/docs/installation/index?version=stable&e
 
 ## Usage
 
-Use the `duckdb` cli to interact with the database. Example
+First unzip the database:
+
+    gunzip ecv.duckdb.gz
+
+Use the `duckdb ecv.duckdb` cli to interact with the database. Example
 
 ```
 ❯ duckdb ecv.duckdb
