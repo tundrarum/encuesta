@@ -8,13 +8,13 @@ from collections import defaultdict
 
 import openpyxl
 
-CODE_DIR = "codes"
+CODE_DIR = "data/disreg_ecv23/codes"
 
 shutil.rmtree(CODE_DIR, ignore_errors=True)
 os.mkdir(CODE_DIR)
 
 
-for file in glob("*.xlsx"):
+for file in glob("data/disreg_ecv23/*.xlsx"):
     maps = defaultdict(list)
     code_map = {}
 
