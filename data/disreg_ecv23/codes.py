@@ -13,10 +13,11 @@ CODE_DIR = "codes"
 shutil.rmtree(CODE_DIR, ignore_errors=True)
 os.mkdir(CODE_DIR)
 
-maps = defaultdict(list)
-code_map = {}
 
 for file in glob("*.xlsx"):
+    maps = defaultdict(list)
+    code_map = {}
+
     wb = openpyxl.load_workbook(file)
     for sheet in wb.worksheets:
         if sheet.title == "Diseño":
@@ -51,11 +52,13 @@ for file in glob("*.xlsx"):
                     else:
                         in_key = False
 
-# Write CSVs
-for code, map in code_map.items():
-    print([code, map])
-    with open(f"{CODE_DIR}/{code}.csv", "w") as codefile:
-        code_writer = csv.writer(codefile)
-        code_writer.writerow(["id", "description"])
-        for key, val in maps[map]:
-            code_writer.writerow([key, val])
+    # Write CSVs
+    for code, map in code_map.items():
+        path = f"{CODE_DIR}/{code}.csv"
+        if os.path.exists(path):
+            raise Exception(f"ERROR: code already exists: {path}")
+        with open(path, "w") as codefile:
+            code_writer = csv.writer(codefile)
+            code_writer.writerow(["id", "description"])
+            for key, val in maps[map]:
+                code_writer.writerow([key, val])
