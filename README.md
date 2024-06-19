@@ -10,7 +10,7 @@ First unzip the database:
 
     gunzip ecv.duckdb.gz
 
-Use the `duckdb ecv.duckdb` cli to interact with the database. Example
+Use the `duckdb db/ecv.duckdb` cli to interact with the database. Example
 
 ```
 ❯ duckdb ecv.duckdb
@@ -62,4 +62,4 @@ Install depedencies
 
     pip3 install -r requirements.txt
 
-Run `make build`. It will delete (if exists) and then create `ecv.duckdb` and the compress it to `ecv.duckdb.gz`.
+Run `make build`. It will delete (if exists) and then create `db/ecv.duckdb` and the compress it to `db/ecv.duckdb.gz`.

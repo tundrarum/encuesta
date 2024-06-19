@@ -4,7 +4,7 @@ from glob import glob
 
 import duckdb
 
-DB_NAME = "ecv.duckdb"
+DB_NAME = "db/ecv.duckdb"
 
 try:
     os.remove(DB_NAME)
