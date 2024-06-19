@@ -59,6 +59,6 @@ for file in glob("data/disreg_ecv23/*.xlsx"):
             raise Exception(f"ERROR: code already exists: {path}")
         with open(path, "w") as codefile:
             code_writer = csv.writer(codefile)
-            code_writer.writerow(["id", "description"])
+            code_writer.writerow(["id", "desc"])
             for key, val in maps[map]:
                 code_writer.writerow([key, val])
