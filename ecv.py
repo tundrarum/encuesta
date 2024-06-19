@@ -11,7 +11,7 @@ import openpyxl
 CODE_DIR = "data/disreg_ecv23/codes"
 DB_NAME = "db/ecv.duckdb"
 
-# Build the codes table
+# Build the codes csvs
 shutil.rmtree(CODE_DIR, ignore_errors=True)
 os.mkdir(CODE_DIR)
 
